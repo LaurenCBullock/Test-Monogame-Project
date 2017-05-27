@@ -6,6 +6,21 @@ using System.Threading.Tasks;
 
 namespace Monogame_Tester
 {
+
+    enum gameState
+    {
+        Menu,
+        Game,
+        GameOver
+    }
+
+    enum buttonState
+    {
+        Hover,
+        Up,
+        Down
+    }
+
     class Globals
     {
     }
