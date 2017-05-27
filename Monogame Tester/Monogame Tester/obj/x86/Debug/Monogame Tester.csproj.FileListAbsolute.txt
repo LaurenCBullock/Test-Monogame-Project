@@ -1,0 +1,23 @@
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Monogame Tester.exe
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Monogame Tester.pdb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\obj\x86\Debug\Monogame Tester.csprojResolveAssemblyReference.cache
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\obj\x86\Debug\Monogame Tester.exe
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\obj\x86\Debug\Monogame Tester.pdb
