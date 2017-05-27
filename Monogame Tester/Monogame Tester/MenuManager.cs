@@ -8,5 +8,12 @@ namespace Monogame_Tester
 {
     class MenuManager
     {
+        public Game1 game;
+
+        MenuManager(Game1 g)
+        {
+            game = g;
+        }
+
     }
 }
