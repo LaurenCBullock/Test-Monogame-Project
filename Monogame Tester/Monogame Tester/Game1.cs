@@ -3,6 +3,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Monogame_Tester
 {
@@ -13,6 +14,9 @@ namespace Monogame_Tester
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        //Texture2D bg;
+
+        Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
 
         public Game1()
         {
@@ -41,6 +45,12 @@ namespace Monogame_Tester
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            textures.Add("bg", Content.Load<Texture2D>("bg"));
+            textures.Add("goal", Content.Load<Texture2D>("goal"));
+            textures.Add("goalie", Content.Load<Texture2D>("goalie"));
+            textures.Add("player", Content.Load<Texture2D>("player"));
+            textures.Add("ball", Content.Load<Texture2D>("ball"));
 
             // TODO: use this.Content to load your game content here
         }
