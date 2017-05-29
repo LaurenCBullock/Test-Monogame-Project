@@ -40,7 +40,7 @@ namespace Monogame_Tester
             }
             if (ball.Kicked == true)
             {
-                ball.BallKick();
+                ball.BallKick(game.gametime);
             }
             else
             {
