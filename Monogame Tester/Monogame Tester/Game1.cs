@@ -56,6 +56,7 @@ namespace Monogame_Tester
             textures.Add("goalie", Content.Load<Texture2D>("goalie"));
             textures.Add("player", Content.Load<Texture2D>("player"));
             textures.Add("ball", Content.Load<Texture2D>("ball"));
+            textures.Add("startBttn", Content.Load <Texture2D>("start"));
 
             // TODO: use this.Content to load your game content here
         }

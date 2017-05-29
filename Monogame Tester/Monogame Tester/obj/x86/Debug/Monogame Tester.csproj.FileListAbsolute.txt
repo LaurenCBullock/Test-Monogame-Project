@@ -50,3 +50,11 @@ C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\
 C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\goalie.xnb
 C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\player.xnb
 C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Player.cs
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Player.cs
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\ball.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\bg.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\goal.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\goalie.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\player.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\start.png
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\start.xnb
