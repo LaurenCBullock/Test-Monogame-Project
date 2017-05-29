@@ -21,8 +21,9 @@ namespace Monogame_Tester
 
         //physics
         float positionX, positionY;     // Position of the character
-        float velocityX, velocityY;     // Velocity of the character
-        float gravity = 0.5f;
+        //float velocityX, velocityY;
+        float velocityY = -20;
+        float gravity = .5f;
 
         public bool Kicked { get { return kicked; } set { kicked = value; } }
 
@@ -51,10 +52,17 @@ namespace Monogame_Tester
         
         public void BallKick(float time)
         {
-            yMove += (int)(gravity * time);
+            velocityY += (gravity * time/2);
             //velocityY += gravity * time;        // Apply gravity to vertical velocity
             //positionX += velocityX * time;      // Apply horizontal velocity to X position
-            positionY += velocityY * time;      // Apply vertical velocity to X position
+            yMove += (int)(velocityY * time/2);      // Apply vertical velocity to X position
+            if (count == 1)
+            {
+                size -= 1;
+            }
+            count += 1;
+            count = count % 2;
+
 
             /*double conversion = Math.Cosh(increment2);
             yMove += (int)conversion/20;

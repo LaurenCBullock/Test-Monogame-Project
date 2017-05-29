@@ -17,7 +17,7 @@ namespace Monogame_Tester
         //Texture2D bg;
 
         public Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
-        GameLogic logic;
+        GameLogic logic; double timer;
 
         public Game1()
         {
@@ -56,6 +56,7 @@ namespace Monogame_Tester
             textures.Add("goalie", Content.Load<Texture2D>("goalie"));
             textures.Add("player", Content.Load<Texture2D>("player"));
             textures.Add("ball", Content.Load<Texture2D>("ball"));
+            textures.Add("startBttn", Content.Load <Texture2D>("start"));
 
             // TODO: use this.Content to load your game content here
         }
@@ -80,7 +81,7 @@ namespace Monogame_Tester
                 Exit();
 
             // TODO: Add your update logic here
-            logic.GameUpdate();
+            timer += gameTime.ElapsedGameTime.TotalSeconds; logic.GameUpdate(timer); 
             base.Update(gameTime);
         }
 
