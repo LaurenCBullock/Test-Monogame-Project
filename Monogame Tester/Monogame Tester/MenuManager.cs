@@ -64,11 +64,11 @@ namespace Monogame_Tester
         public void InitButtons()
         {
             //Start
-            buttons.Add("start", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width/2-400, 100, 400, 100), game.textures["blankBttn"], gameState.Game, this));
+            buttons.Add("start", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width/2 - 200, 100, 400, 100), game.textures["blankBttn"], gameState.Game, this));
             //Options
-            buttons.Add("options", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 400, 400, 400, 100), game.textures["blankBttn"], gameState.Options, this));
+            buttons.Add("options", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 200, 400, 400, 100), game.textures["blankBttn"], gameState.Options, this));
             //Exit
-            buttons.Add("exit", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 400, 250, 400, 100), game.textures["blankBttn"], gameState.Exit, this));
+            buttons.Add("exit", new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 200, 250, 400, 100), game.textures["blankBttn"], gameState.Exit, this));
             
         }
     }
