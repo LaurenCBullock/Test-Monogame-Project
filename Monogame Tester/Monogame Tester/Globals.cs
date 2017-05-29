@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace Monogame_Tester
 {
 
-    enum gameState
+    public enum gameState
     {
         Menu,
         Game,
-        GameOver
+        GameOver,
+        Options,
+        Exit
     }
 
     enum buttonState

@@ -14,10 +14,12 @@ namespace Monogame_Tester
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public gameState curState;
         //Texture2D bg;
 
         public Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
         GameLogic logic; double timer;
+        public MenuManager menuManager;
 
         public Game1()
         {
@@ -40,6 +42,9 @@ namespace Monogame_Tester
 
             base.Initialize();
             logic = new GameLogic(this);
+
+            
+            curState = gameState.Menu;
         }
 
         /// <summary>
@@ -56,7 +61,9 @@ namespace Monogame_Tester
             textures.Add("goalie", Content.Load<Texture2D>("goalie"));
             textures.Add("player", Content.Load<Texture2D>("player"));
             textures.Add("ball", Content.Load<Texture2D>("ball"));
-            textures.Add("startBttn", Content.Load <Texture2D>("start"));
+            textures.Add("blankBttn", Content.Load <Texture2D>("start"));
+
+            menuManager = new MenuManager(this);
 
             // TODO: use this.Content to load your game content here
         }
@@ -79,9 +86,17 @@ namespace Monogame_Tester
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
-            timer += gameTime.ElapsedGameTime.TotalSeconds; logic.GameUpdate(timer); 
+            switch (curState)
+            {
+                case gameState.Menu:
+                    menuManager.MenuUpdate();
+                    break;
+                case gameState.Game:
+                    timer += gameTime.ElapsedGameTime.TotalSeconds; logic.GameUpdate(timer);
+                    break;
+                default:
+                    break;
+            }
             base.Update(gameTime);
         }
 
@@ -94,10 +109,28 @@ namespace Monogame_Tester
             GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            logic.GameDraw(spriteBatch);
+            switch(curState)
+            {
+                case gameState.Menu:
+                    menuManager.MenuDraw(spriteBatch);
+                    break;
+                case gameState.Game:
+                    logic.GameDraw(spriteBatch);
+                    break;
+                default:
+                    break;
+
+            }
+            
+            
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        public void Quit()
+        {
+            this.Exit();
         }
     }
 }
