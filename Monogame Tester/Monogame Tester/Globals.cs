@@ -21,6 +21,14 @@ namespace Monogame_Tester
         Down
     }
 
+    enum playerState
+    {
+        Idle,
+        WalkLeft,
+        WalkRight,
+        Kick
+    }
+
     class Globals
     {
     }

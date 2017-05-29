@@ -16,12 +16,16 @@ namespace Monogame_Tester
         SpriteBatch spriteBatch;
         //Texture2D bg;
 
-        Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
+        public Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
+        GameLogic logic;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 800;  // Set Width of Window
+            graphics.PreferredBackBufferHeight = 600;   // Set Height of Window
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -35,6 +39,7 @@ namespace Monogame_Tester
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            logic = new GameLogic(this);
         }
 
         /// <summary>
@@ -75,7 +80,7 @@ namespace Monogame_Tester
                 Exit();
 
             // TODO: Add your update logic here
-
+            logic.GameUpdate();
             base.Update(gameTime);
         }
 
@@ -86,8 +91,10 @@ namespace Monogame_Tester
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            logic.GameDraw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
