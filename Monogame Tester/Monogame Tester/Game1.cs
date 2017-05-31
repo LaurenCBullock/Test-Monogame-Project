@@ -86,10 +86,11 @@ namespace Monogame_Tester
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            menuManager.MenuUpdate();
             switch (curState)
             {
                 case gameState.Menu:
-                    menuManager.MenuUpdate();
+                    
                     break;
                 case gameState.Game:
                     logic.GameUpdate();
@@ -111,10 +112,11 @@ namespace Monogame_Tester
             GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            switch(curState)
+            menuManager.MenuDraw(spriteBatch);
+            switch (curState)
             {
                 case gameState.Menu:
-                    menuManager.MenuDraw(spriteBatch);
+                   
                     break;
                 case gameState.Game:
                     logic.GameDraw(spriteBatch);

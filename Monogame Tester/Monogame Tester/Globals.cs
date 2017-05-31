@@ -13,7 +13,14 @@ namespace Monogame_Tester
         Game,
         GameOver,
         Options,
+        Controls,
         Exit
+    }
+
+    public enum controlMode
+    {
+        Mouse,
+        Keyboard
     }
 
     enum buttonState
