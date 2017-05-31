@@ -37,7 +37,7 @@ namespace Monogame_Tester
             if (Keyboard.GetState().IsKeyUp(Keys.Right) && Keyboard.GetState().IsKeyUp(Keys.Left) && Keyboard.GetState().IsKeyUp(Keys.Space))
             {
                 state = playerState.Idle;
-                Console.WriteLine("Idle");
+                //Console.WriteLine("Idle");
             }
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {

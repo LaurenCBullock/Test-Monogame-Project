@@ -14,8 +14,9 @@ namespace Monogame_Tester
         Rectangle hitbox;
         Texture2D buttonTexture;
         MenuManager manager;
+        int myIndex;
         gameState state;
-        Boolean hover;
+        public Boolean hover;
        
         //Button controlling gameState
         public Button(Rectangle r, Texture2D t, gameState s, MenuManager m)
@@ -24,6 +25,7 @@ namespace Monogame_Tester
             buttonTexture = t;
             state = s;
             manager = m;
+            myIndex = manager.buttonCount++;
             hover = false;
         }
 
@@ -50,18 +52,41 @@ namespace Monogame_Tester
         {
             Rectangle mouseRect = new Rectangle(Mouse.GetState().X, Mouse.GetState().Y, 1, 1);
             if (mouseRect.Intersects(hitbox))
+            {
+                manager.control = controlMode.Mouse;
                 hover = true;
-            else
+                manager.hoverIndex = myIndex;
+            }
+            else if (manager.control == controlMode.Mouse)
+            {
                 hover = false;
+            }
         }
 
         //Determins if the mouse was clicked over a hovered button
         public void ButtonClicked()
         {
-            if(Mouse.GetState().LeftButton == ButtonState.Pressed && hover == true)
+            Rectangle mouseRect = new Rectangle(Mouse.GetState().X, Mouse.GetState().Y, 1, 1);
+
+            if (manager.control == controlMode.Mouse)
             {
-                manager.game.curState = state;
+                    if (Mouse.GetState().LeftButton == ButtonState.Pressed && mouseRect.Intersects(hitbox))
+                    {
+                        Console.WriteLine("Test1");
+                        manager.game.curState = state;
+                        manager.InitButtons();
+                    }
             }
+            else if(manager.control == controlMode.Keyboard)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter) && hover == true)
+                {
+                    Console.WriteLine("Test2");
+                    manager.game.curState = state;
+                    manager.InitButtons();
+                }
+            }
+            
         }
     }
 }

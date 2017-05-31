@@ -37,7 +37,7 @@ namespace Monogame_Tester
                 ball[0].BallDraw(spritebatch);
             }
             player.PlayerDraw(spritebatch);
-            spritebatch.DrawString(game.Tahoma, "" + player.Points, new Vector2(0,0), Color.White);
+            //spritebatch.DrawString(game.Tahoma, "" + player.Points, new Vector2(0,0), Color.White);
             
         }
 

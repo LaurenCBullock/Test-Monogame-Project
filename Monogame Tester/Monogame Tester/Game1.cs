@@ -55,7 +55,6 @@ namespace Monogame_Tester
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Tahoma = Content.Load<SpriteFont>("Tahoma_40");
 
             textures.Add("bg", Content.Load<Texture2D>("bg"));
             textures.Add("goal", Content.Load<Texture2D>("goal"));
@@ -87,10 +86,11 @@ namespace Monogame_Tester
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            menuManager.MenuUpdate();
             switch (curState)
             {
                 case gameState.Menu:
-                    menuManager.MenuUpdate();
+                    
                     break;
                 case gameState.Game:
                     timer = gameTime.ElapsedGameTime.Milliseconds; logic.GameUpdate(timer);
@@ -110,10 +110,11 @@ namespace Monogame_Tester
             GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            switch(curState)
+            menuManager.MenuDraw(spriteBatch);
+            switch (curState)
             {
                 case gameState.Menu:
-                    menuManager.MenuDraw(spriteBatch);
+                   
                     break;
                 case gameState.Game:
                     logic.GameDraw(spriteBatch);
