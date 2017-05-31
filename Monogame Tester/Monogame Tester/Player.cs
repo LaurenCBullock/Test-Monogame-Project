@@ -15,10 +15,12 @@ namespace Monogame_Tester
         playerState state = playerState.Idle;
         int xMove = 300;
         Rectangle hitbox;
+        double points;
 
         public int XMove { get { return xMove; } set { xMove = value; } }
         public Rectangle Hitbox { get { return hitbox; } set { hitbox = value; } }
         public playerState State { get { return state; } set { state = value; } }
+        public double Points { get { return points; } set { points = value; } }
 
         public Player(Game1 g)
         {

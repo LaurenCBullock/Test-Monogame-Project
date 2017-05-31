@@ -15,7 +15,7 @@ namespace Monogame_Tester
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         public gameState curState;
-        //Texture2D bg;
+        public SpriteFont Tahoma;
 
         public Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
         GameLogic logic; double timer;
@@ -55,6 +55,7 @@ namespace Monogame_Tester
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Tahoma = Content.Load<SpriteFont>("Tahoma_40");
 
             textures.Add("bg", Content.Load<Texture2D>("bg"));
             textures.Add("goal", Content.Load<Texture2D>("goal"));
@@ -92,7 +93,7 @@ namespace Monogame_Tester
                     menuManager.MenuUpdate();
                     break;
                 case gameState.Game:
-                    timer += gameTime.ElapsedGameTime.TotalSeconds; logic.GameUpdate(timer);
+                    timer = gameTime.ElapsedGameTime.Milliseconds; logic.GameUpdate(timer);
                     break;
                 default:
                     break;

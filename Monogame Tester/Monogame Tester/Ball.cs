@@ -52,27 +52,16 @@ namespace Monogame_Tester
         
         public void BallKick(float time)
         {
-            velocityY += (gravity * time/2);
+            velocityY += (gravity * time/10);
             //velocityY += gravity * time;        // Apply gravity to vertical velocity
             //positionX += velocityX * time;      // Apply horizontal velocity to X position
-            yMove += (int)(velocityY * time/2);      // Apply vertical velocity to X position
+            yMove += (int)(velocityY * time/10);      // Apply vertical velocity to X position
             if (count == 1)
             {
                 size -= 1;
             }
             count += 1;
             count = count % 2;
-
-
-            /*double conversion = Math.Cosh(increment2);
-            yMove += (int)conversion/20;
-            increment -= .5;
-            if (count == 3)
-            {
-                size -= 1;
-            }
-            count += 1;
-            count = count % 6;*/
         }
 
     }

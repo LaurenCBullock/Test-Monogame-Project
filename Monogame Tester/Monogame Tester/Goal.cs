@@ -13,6 +13,8 @@ namespace Monogame_Tester
         Rectangle hitbox = new Rectangle(75, 50 , 650, 350);
         public Game1 game;
 
+        public Rectangle Hitbox { get { return hitbox; } set { hitbox = value; } }
+
         public Goal(Game1 g)
         {
             game = g;

@@ -13,14 +13,18 @@ namespace Monogame_Tester
     {
         public Game1 game;
         Player player;
-        Ball ball;
         Goal goal;
+        List<Ball> ball;
 
         public GameLogic(Game1 g)
         {
             game = g;
             goal = new Goal(g);
-            ball = new Ball(g);
+            ball = new List<Ball>();
+            for (int i = 0; i < 10; i++)
+            {
+                ball.Add(new Ball(g));
+            }
             player = new Player(game);
         }
         
@@ -28,8 +32,12 @@ namespace Monogame_Tester
         {
             spritebatch.Draw(game.textures["bg"], new Rectangle( 0,0,800,600),Color.White);
             goal.GoalDraw(spritebatch);
-            ball.BallDraw(spritebatch);
+            if (ball.Count > 0)
+            {
+                ball[0].BallDraw(spritebatch);
+            }
             player.PlayerDraw(spritebatch);
+            spritebatch.DrawString(game.Tahoma, "" + player.Points, new Vector2(0,0), Color.White);
             
         }
 
@@ -37,23 +45,39 @@ namespace Monogame_Tester
         {
             
             player.PlayerMovement();
-            if (player.Hitbox.Intersects(ball.Hitbox) && player.State == playerState.Kick)
+            if (ball.Count > 0)
             {
-                if (ball.Kicked == false)
+                if (player.Hitbox.Intersects(ball[0].Hitbox) && player.State == playerState.Kick)
                 {
-                    ball.Kicked = true;
-                }
-                
-            }
-            if (ball.Kicked == true)
-            {
+                    if (ball[0].Kicked == false)
+                    {
+                        ball[0].Kicked = true;
+                    }
 
-                ball.BallKick((float)time);
+                }
+                if (ball[0].Kicked == true)
+                {
+
+                    ball[0].BallKick((float)time);
+                }
+                else
+                {
+                    ball[0].BallMovement();
+                }
+                if (ball[0].Hitbox.Size.X == 80 && ball[0].Hitbox.Intersects(goal.Hitbox))
+                {
+                    Console.WriteLine("Win");
+                    player.Points += 20;
+                    ball.Remove(ball[0]);
+
+                }
+                else if (ball[0].Hitbox.Size.X == 80 || ball[0].Hitbox.X > 800)
+                {
+                    Console.WriteLine("Lose");
+                    ball.Remove(ball[0]);
+                }
             }
-            else
-            {
-                ball.BallMovement();
-            }
+            
         }
 
         
