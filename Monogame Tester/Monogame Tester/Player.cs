@@ -42,19 +42,19 @@ namespace Monogame_Tester
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
                 state = playerState.Kick;
-                Console.WriteLine("Kick");
+                //Console.WriteLine("Kick");
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 state = playerState.WalkLeft;
                 xMove -= 5;
-                Console.WriteLine("Left");
+                //Console.WriteLine("Left");
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 state = playerState.WalkRight;
                 xMove += 5;
-                Console.WriteLine("Right");
+                //Console.WriteLine("Right");
             }
             if(xMove > 600)
             {

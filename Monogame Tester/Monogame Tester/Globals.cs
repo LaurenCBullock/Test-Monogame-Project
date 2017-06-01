@@ -38,6 +38,14 @@ namespace Monogame_Tester
         Kick
     }
 
+    enum GoalieState
+    {
+        WalkLeft,
+        WalkRight,
+        ChaseBallLeft,
+        ChaseBallRight
+    }
+
     class Globals
     {
     }
