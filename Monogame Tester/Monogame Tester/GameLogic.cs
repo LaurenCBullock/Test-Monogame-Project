@@ -81,13 +81,13 @@ namespace Monogame_Tester
                 {
                     if (ball[0].Hitbox.Intersects(goalie.Hitbox))
                     {
-                        //Console.WriteLine("Lose");
+                        Console.WriteLine("Lose");
                         ball.Remove(ball[0]);
                         goalie.Curstate = goalie.PrevState;
                     }
                     else
                     {
-                       // Console.WriteLine("Win");
+                        Console.WriteLine("Win");
                         player.Points += 20;
                         ball.Remove(ball[0]);
                         goalie.Curstate = goalie.PrevState;
@@ -101,6 +101,10 @@ namespace Monogame_Tester
                     ball.Remove(ball[0]);
                     goalie.Curstate = goalie.PrevState;
                 }
+            }
+            else
+            {
+                game.curState = gameState.GameOver;
             }
             
         }

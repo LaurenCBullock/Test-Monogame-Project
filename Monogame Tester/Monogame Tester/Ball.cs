@@ -43,7 +43,7 @@ namespace Monogame_Tester
         public void BallMovement()
         {
             yMove = 450;
-            xMove += 2;
+            xMove += 4;
             double conversion = -Math.Abs(Math.Sin(increment) * 20)  ;
             yMove += (int)conversion;
             increment += .1 % 1;
