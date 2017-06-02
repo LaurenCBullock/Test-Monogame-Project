@@ -60,3 +60,5 @@ C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Teste
 C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\start.xnb
 C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\start.png
 C:\Users\Lauren\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\start.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Content\pauseGrey.xnb
+C:\Users\Connor C\Documents\Test-Monogame-Project\Monogame Tester\Monogame Tester\bin\Windows\x86\Debug\Icon.ico

@@ -92,6 +92,13 @@ namespace Monogame_Tester
                     break;
                 case gameState.KickMenu:
                     break;
+                case gameState.GameOver:
+                    for (int i = 0; i < buttons.Count; i++)
+                    {
+                        buttons[i].ButtonClicked();
+                        buttons[i].ButtonHover();
+                    }
+                    break;
                 default:
                     break;
             }
@@ -115,6 +122,12 @@ namespace Monogame_Tester
                     }
                     break;
                 case gameState.PauseMenu:
+                    foreach (Button b in buttons)
+                    {
+                        b.DrawButton(spriteBatch);
+                    }
+                    break;
+                case gameState.GameOver:
                     foreach (Button b in buttons)
                     {
                         b.DrawButton(spriteBatch);
@@ -162,6 +175,13 @@ namespace Monogame_Tester
                     buttons.Add(new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 200, 100, 400, 100), game.textures["blankBttn"], gameState.Options, this));
                     //Back
                     buttons.Add(new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 200, 250, 400, 100), game.textures["blankBttn"], gameState.Game, this));
+                    break;
+                case gameState.GameOver:
+                    buttons.Clear();
+                    Console.WriteLine("Game Over init");
+                    buttonCount = -1;
+                    hoverIndex = -1;
+                    buttons.Add(new Button(new Rectangle(game.GraphicsDevice.Viewport.Width / 2 - 200, 400, 400, 100), game.textures["blankBttn"], gameState.Menu, this));
                     break;
                 default:
                     Console.WriteLine(game.curState);

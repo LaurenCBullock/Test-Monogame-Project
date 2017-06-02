@@ -62,6 +62,7 @@ namespace Monogame_Tester
             textures.Add("player", Content.Load<Texture2D>("player"));
             textures.Add("ball", Content.Load<Texture2D>("ball"));
             textures.Add("blankBttn", Content.Load <Texture2D>("start"));
+            textures.Add("pauseBack", Content.Load<Texture2D>("pauseGrey"));
 
             menuManager = new MenuManager(this);
 
@@ -128,6 +129,7 @@ namespace Monogame_Tester
                     break;
                 case gameState.PauseMenu:
                     logic.GameDraw(spriteBatch);
+                    spriteBatch.Draw(textures["pauseBack"], new Rectangle(0, 0, 800, 600), Color.White * 0.75f);
                     break;
                 default:
                     break;

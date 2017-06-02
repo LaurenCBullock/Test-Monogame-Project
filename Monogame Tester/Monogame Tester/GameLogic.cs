@@ -105,6 +105,7 @@ namespace Monogame_Tester
             else
             {
                 game.curState = gameState.GameOver;
+                game.menuManager.InitButtons();
             }
 
         }
