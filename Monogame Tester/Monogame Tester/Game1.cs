@@ -84,9 +84,9 @@ namespace Monogame_Tester
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-            menuManager.MenuUpdate();
+            /*if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();*/
+            
             switch (curState)
             {
                 case gameState.Menu:
@@ -94,10 +94,18 @@ namespace Monogame_Tester
                     break;
                 case gameState.Game:
                     timer = gameTime.ElapsedGameTime.Milliseconds; logic.GameUpdate(timer);
+                    if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                    {
+                        curState = gameState.PauseMenu;
+                        menuManager.InitButtons();
+                    }
+                    break;
+                case gameState.PauseMenu:
                     break;
                 default:
                     break;
             }
+            menuManager.MenuUpdate();
             base.Update(gameTime);
         }
 
@@ -110,7 +118,6 @@ namespace Monogame_Tester
             GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            menuManager.MenuDraw(spriteBatch);
             switch (curState)
             {
                 case gameState.Menu:
@@ -119,12 +126,15 @@ namespace Monogame_Tester
                 case gameState.Game:
                     logic.GameDraw(spriteBatch);
                     break;
+                case gameState.PauseMenu:
+                    logic.GameDraw(spriteBatch);
+                    break;
                 default:
                     break;
 
             }
-            
-            
+            menuManager.MenuDraw(spriteBatch);
+
             spriteBatch.End();
 
             base.Draw(gameTime);

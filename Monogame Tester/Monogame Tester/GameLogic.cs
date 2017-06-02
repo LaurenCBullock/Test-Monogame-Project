@@ -106,7 +106,7 @@ namespace Monogame_Tester
             {
                 game.curState = gameState.GameOver;
             }
-            
+
         }
 
         
