@@ -11,6 +11,8 @@ namespace Monogame_Tester
     {
         Menu,
         Game,
+        PauseMenu,
+        KickMenu,
         GameOver,
         Options,
         Controls,

@@ -81,7 +81,11 @@ namespace Monogame_Tester
                         buttons[i].ButtonHover();
                     }
                     break;
+                case gameState.PauseMenu:
+                    break;
                 case gameState.Game:
+                    break;
+                case gameState.KickMenu:
                     break;
                 default:
                     break;
